@@ -19,6 +19,7 @@
     justify-content: center;
     background: var(--linear-gradient);
     color: #d1d5db;
+    padding: 20px;
 }
 
 #calculator {
@@ -83,7 +84,8 @@
     font-size: 40px;
 }
 
-#calculate{
+#calculate,
+#clear {
     background: var(--linear-gradient);
     border: none;
     padding: 10px;
@@ -94,13 +96,46 @@
     cursor: pointer;
 }
 
-#clear{
-    background: var(--linear-gradient);
-    border: none;
-    padding: 10px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
+#calculate:hover,
+#clear:hover {
+    filter: brightness(0.9); /* Escurecer ao passar o mouse*/
+}
+
+@media only screen and (max-width: 600px) {
+    #calculator {
+        padding: 15px;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    #calculator h2 {
+        font-size: 20px;
+    }
+
+    #calculator h2::before {
+        bottom: 1px;
+    }
+
+    .input-field input {
+        font-size: 14px;
+        padding: 4px;
+    }
+
+    #calculate,
+    #clear {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    #calculator h2 {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #calculator h2 {
+        font-size: 16px;
+    }
 }
